@@ -1,0 +1,259 @@
+
+.menu{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 300px;
+
+}
+
+.menu>ul>li{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.selectOption{
+    margin-left: 10px;
+}
+
+.menu>ul>li>a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: large;
+    color: black;
+    
+}
+
+.menu>ul>li>a:hover{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: large;
+    text-decoration: none;
+    color: red;
+}
+
+.consumerForm{
+    display: flex;
+    background-color: #FBFCF8;
+    border-radius: 3px;
+    padding: 1.8em;
+    align-content: space-around;
+}
+
+
+.destinyEdit{
+    display: flex;
+    background-color: #FBFCF8;
+    border-radius: 3px;
+    padding: 1.8em;
+    flex-direction: column;
+    align-content: space-around;
+
+}
+
+.consumerForm>div>div{
+    margin-bottom: 10px;
+}
+
+.destinyEdit>div{
+    margin: 10px;
+}
+
+.return>button{
+    border-color: blue;
+    color: blue;
+}
+
+.return>button:hover{
+    border-color: blue;
+    background-color: blue;
+    color: white;
+}
+
+
+.return>button>a{
+    color: black;
+}
+
+.return>button>a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.productAdd{
+    display: flex;
+    background-color: #FBFCF8;
+    border-radius: 3px;
+    padding: 1.8em;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.productAdd>div>div{
+    margin-bottom: 10px;
+}
+
+.productEdit{
+    display: flex;
+    background-color: #FBFCF8;
+    border-radius: 3px;
+    padding: 1.8em;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.productEdit>div>div{
+    margin-bottom: 10px;
+}
+
+.jogo-principal{
+    font-size: 16px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jogo-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin: 1px;
+}
+
+.jogo-principal .sub-titulo{
+    text-align: center;
+}
+
+.jogo-principal .titulo{
+    margin-top: 1%;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+.jogo-principal .botoes button{
+    margin:0 auto;
+    display:block;
+}
+
+.container{
+    margin-left: 10px;
+    
+}
+
+.jogo-principal .container{
+    width: 70%;
+}
+
+.item{
+    float:left;
+}
+
+
+.jogo-principal .img_home img  {
+    max-width: 25%;
+    max-height: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homeshow-lista-jogos {
+    margin-top:100px;
+}
+
+.homeshow-lista-jogos .titulo{
+    margin-top:20px;
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.homeshow-lista-jogos .owl-carousel{
+    margin-top:30px;
+}
+
+
+
+
+.form-group  input[type ="text"],.form-group input[type ="password"]{
+
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+
+}
+
+.form-group  input[type ="text"]:focus,.form-group input[type ="password"]:focus{
+
+    width: 280px;
+    border-color: #2ecc71;
+
+}
+.page-header input[type ="submit"]{
+
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.page-header input[type ="submit"]:hover{
+
+    background:#2ecc71 ;
+}
+.owl-item{
+
+    float:left;
+     width: 30%;
+     height: 30%;
+     margin: 10px 15px 10px auto;
+     border-radius: 15px;
+     box-shadow: 1px 1px 4px;
+}
+.Logo{
+
+    text-align:center;
+}
+.sub-titulo{
+    text-align: center;
+}
+.titulo{
+    text-align: center;
+}
+.img_home{
+    top: 250px;
+    left: 80px;
+    object-fit: cover;
+
+}
+.descricao{
+    top: 250px;
+    left: 80px;
+}
+.jogo-principal{
+    box-shadow: 1px 1px 4px;
+    margin: 10px 15px 30px auto;
+    padding-right: 40px;
+
+}

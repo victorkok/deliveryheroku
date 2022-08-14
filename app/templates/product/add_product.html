@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Produtos{% endblock %}
+{% block page_content %}
+<h1 style="text-align: center;">Cadastrar novo produto</h1>
+
+<form action="/add_product" class="productAdd" method="post">
+    <div class="form-group">
+        <div class="col-md-6">
+            <input type="text" name="name", id="name" placeholder="Nome" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="price" id="price" placeholder="Preço" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <textarea name="description" id="description" cols="68" rows="5" placeholder="Descrição"></textarea>
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="players" id="players" placeholder="Nº  jogadores" class="form-control">
+        </div>
+        <div class="col-md-6 input">
+            <input type="text" name="age" id="age" placeholder="Faixa etaria" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label for='theme'>Categoria</label>
+            <select name="theme",id="theme", class="form-control" >
+                {% for theme in themes %}
+              <option>{{theme.name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <br>
+    <div class="row col-xs-12">
+        <button type="submit" class="btn btn-block btn-success">Enviar</button>
+    </div>
+</form>
+<div class="return">
+    <a href="/product">Voltar</a>
+</div>
+{% endblock %}

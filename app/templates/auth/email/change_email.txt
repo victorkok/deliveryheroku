@@ -1,0 +1,7 @@
+Prezado {{ consumer.name }},
+Para confirmar o novo e-mail clique no seguinte link:
+{{ url_for('auth.change_email', token=token, _external=True)}}
+
+<p>Desde já agradeçemos sua atenção,</p>
+<p>Time The cat in the box</p>
+<p><small>Observação: Esse e-mail é automático, não responda a ele.</small></p>

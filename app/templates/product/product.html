@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Produtos{% endblock %}
+{% block page_content %}
+<h1 style="text-align: center;">Produtos</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <button type="button" class="btn btn-success"><a href="/add_product">Adicionar produto</a></button>
+        </div>
+        <div class="mh-100" id="consumer_table">
+            <table class="table table-striped w-auto">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Descrição</th>
+                        <th>Número de jogadores</th>
+                        <th>Faixa etária</th>
+                        <th>Tema</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in products %}
+                    <tr>
+                        <td>{{p.name}}</td>
+                        <td>R$ {{p.price | replace(".", ",")}}</td>
+                        <td>{{p.description}}</td>
+                        <td>{{p.players}}</td>
+                        <td>{{p.age}}</td>
+                        <td>{{p.theme.name}}</td>
+                        <td>
+                            <a href="/edit_product/{{p.id}}">Editar</a>
+                            <a href="/delete_product/{{p.id}}">Excluir</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="return">
+        <button type="button" class="btn btn-dark"><a href="/cadastro">Voltar</a></button>
+    </div>
+</div>
+{% endblock %}

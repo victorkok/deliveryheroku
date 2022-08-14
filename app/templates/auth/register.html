@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+<!--{% import "bootstrap/wtf.html" as wtf %}-->
+{% block title %}Cadastro Cliente{% endblock %}
+{% block page_content %}
+<div class="page-header">
+    <h1 style="text-align: center;">Cadastrar novo cliente</h1>
+</div>
+<!--<div class="col-md-4">-->
+{#{ wtf.quick_form(form) }#}
+<!--</div>-->
+
+<form action="/auth/register" id="consumerForm" class="consumerForm" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" name="username", id="username" placeholder="Nome" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <input type="email" name="email" id="email" placeholder="E-mail" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <input type="password" name="password" id="password" placeholder="Senha" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="address" id="address" placeholder="Endereço" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="number" id="number" placeholder="Número" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="zipcode" id="zipcode" placeholder="CEP" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="neighborhood" id="neighborhood" placeholder="Bairro" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="complement" id="complement" placeholder="Complemento" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="city" id="city" placeholder="Cidade" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="state" id="state" placeholder="Estado" class="form-control">
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-block btn-success">Enviar</button>
+        </div>
+    </div>
+
+</form>
+<div class="return">
+    <button type="button" class="btn"><a href="/">Voltar</a></button>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
+

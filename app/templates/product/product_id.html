@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Produto{% endblock %}
+
+{% block page_content %}
+<div class="Produto_Id">
+    <ul>
+        <li>Nome do Jogo: {{product.name}}</li>
+        <li>Preço: R${{product.price | replace(".", ",")}}</li>
+        <li>Descrição: {{product.description}}</li>
+        <li>Número de Jogadores: {{product.players}}</li>
+        <li>Faixa Etária: {{product.age}}</li>
+    </ul>
+</div>
+<div class="return">
+    <a href="/">Voltar</a>
+</div>
+{% endblock %}

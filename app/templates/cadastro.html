@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Cadastro{% endblock %}
+
+{% block page_content %}
+<h1>Cadastro de Cliente e produto</h1>
+<h1>Olá,
+    {% if current_user.is_authenticated %}
+        {{current_user.username}}
+    {% else %}
+        Estranho
+    {% endif %}!</h1>
+{% if not known %}
+<p>Bem-vindo!</p>
+{% else %}
+<p>Que bom ve-lo de novo!</p>
+{% endif %}
+</div>
+{% if current_user.is_authenticated %}
+<h5 class="selectOption">Selecione uma opção:</h5>
+<div class="menu">
+    <ul class="list-group">
+        <li class="list-group-item"><a href="/consumer">Cadastrar Cliente</a></li>
+        <li class="list-group-item"><a href="/product">Cadastrar Produto</a></li>
+    </ul>
+</div>
+{% endif %}
+{% endblock %}
+
+

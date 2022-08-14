@@ -1,0 +1,10 @@
+<p>Prezado {{ consumer.username }}</p>
+<p>Bem vindos ao Jogos Acme</p>
+
+<p>Para confirmar seu acesso: <a href="{{ url_for('auth.confirm', token=token, _external=True)}}">Clique aqui.</a> </p>
+<p>Alternativamente você pode acessar via esse link:</p>
+<p>{{url_for('auth.confirm', token=token, _external=True)}}</p>
+<p>Desde já agradeçemos sua atenção,</p>
+<p>Time The cat in the box</p>
+
+<p><small>Observação: Esse e-mail é automático, não responda a ele.</small></p>

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Clientes{% endblock %}
+{% block page_content %}
+<h1 style="text-align: center;">Clientes</h1>
+<div class="container">
+    <div class="row">
+        <div class="mh-100" id="consumer_table">
+            <table class="table table-striped w-auto">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Endereço</th>
+                        <th scope="col">Número</th>
+                        <th scope="col">CEP</th>
+                        <th scope="col">Bairro</th>
+                        <th scope="col">Complemento</th>
+                        <th scope="col">Cidade</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Ações</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in consumers %}
+                    <tr>
+                        <td scope="row">{{c.username}}</td>
+                        <td scope="row">{{c.email}}</td>
+                        <td scope="row">{{c.destiny.address}}</td>
+                        <td scope="row">{{c.destiny.number}}</td>
+                        <td scope="row">{{c.destiny.zipcode}}</td>
+                        <td scope="row">{{c.destiny.neighborhood}}</td>
+                        <td scope="row">{{c.destiny.complement}}</td>
+                        <td scope="row">{{c.destiny.city}}</td>
+                        <td scope="row">{{c.destiny.state}}</td>
+
+                        <td>
+                            <a href="/edit_consumer/{{c.id}}">Editar</a>
+                            <a href="/delete_consumer/{{c.id}}">Excluir</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="return">
+    <button type="button" class="btn"><a href="/cadastro">Voltar</a></button>
+</div>
+{% endblock %}

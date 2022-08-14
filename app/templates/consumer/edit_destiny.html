@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Edição de Cliente{% endblock %}
+{% block page_content %}
+<h1 style="text-align: center;">Editar {{ consumer.name }}</h1>
+<form action="/edit_consumer/{{ consumer.id }}" class="destinyEdit" method="post">
+    <div class="col-md-6">
+        <input type="text" name="address" id="address" placeholder="Endereço" class="form-control" value="{{ consumer.destiny.address }}">
+    </div>
+    <div class="col-md-6">
+        <input type="text" name="number" id="number" placeholder="Número" class="form-control" value="{{ consumer.destiny.number }}">
+    </div>
+    <div class="col-md-6">
+        <input type="text" name="zipcode" id="zipcode" placeholder="CEP" class="form-control" value="{{ consumer.destiny.zipcode }}">
+    </div>
+    <div class="col-md-6">
+        <input type="text" name="neighborhood" id="neighborhood" placeholder="Bairro" class="form-control" value="{{ consumer.destiny.neighborhood }}">
+    </div>
+    <div class="col-md-6">
+        <input type="text" name="complement" id="complement" placeholder="Complemento" class="form-control" value="{{ consumer.destiny.complement }}"> 
+    </div>
+    <div class="col-md-6">
+        <input type="text" name="city" id="city" placeholder="Cidade" class="form-control" value="{{ consumer.destiny.city }}">
+    </div>
+    <div class="col-md-6">
+        <input type="text" name="state" id="state" placeholder="Estado" class="form-control" value="{{ consumer.destiny.state }}">
+    </div>
+    <br>
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-block btn-success btn">Enviar</button>
+    </div>
+</form>
+<div class="return">
+    <button type="button" class="btn"><a href="/cadastro">Voltar</a></button>
+</div>
+{% endblock %}
