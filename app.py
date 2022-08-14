@@ -4,6 +4,9 @@ import os
 from app import create_app, db
 from app.models import Consumer, Destiny, Product, Theme
 
+from flask import Flask
+app = Flask(__name__)
+
 
 app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 migrate = Migrate(app, db)
@@ -20,3 +23,7 @@ def test():
     import unittest
     tests = unittest.TestLoader().discover('tests')
     unittest.TextTestRunner(verbosity=2).run(tests)
+
+
+if __name__ == "__main__":
+    app.run()
